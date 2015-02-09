@@ -62,3 +62,40 @@ MDT.Colour.prototype.sum = function()
 
     return votes;
 }
+
+
+/**\fn MDT.Colour.prototype._get_votes
+ *
+ * Gets the votes for the object's colour
+ *
+ * @param None
+ *
+ * @returns None
+ */
+
+MDT.Colour.prototype._get_votes = function()
+{
+    var self = this;
+
+    this._votes = [];
+
+    AD.AjaxAPI.ajax_api_call('/ajax.php',
+			     'get_votes',
+			     "colour=" + this._colour_name,
+			     function(data)
+			     {
+				 for(var i = 0; i < data.json.votes.length; i++)
+				 {
+				     self._push(data.json.votes[i]);
+				 }
+
+				 self._votes_retrieved = true;
+			     },
+			     undefined,
+			     function(data)
+			     {
+				 console.log(data);
+			     },
+			     false
+			    );
+}
