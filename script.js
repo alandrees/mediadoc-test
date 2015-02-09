@@ -106,3 +106,32 @@ MDT.colour_renderer = function()
 
     $("#" + MDT.target).append(element);
 }
+
+
+/**\fn MDT.print_sum
+ *
+ * Prints the sum for a given colour
+ *
+ * @param colour (object) colour object
+ *
+ * @returns None
+ */
+
+MDT.print_sum = function()
+{
+    var colour_name;
+
+    if(this instanceof MDT.Colour || this instanceof MDT.Total)
+    {
+	colour_name = this._colour_name;
+    }
+    else
+    {
+	console.log("Not an MDT.Colour object");
+	return;
+    }
+
+    var sum = this.sum();
+
+    $("." + colour_name).find(".vote-sum").text(sum.toString());
+}
