@@ -29,5 +29,30 @@ array_walk_recursive($_COOKIE, function(&$val, $index){ $val = strip_tags($val);
 
 array_walk_recursive($_REQUEST, function(&$val, $index){ $val = strip_tags($val); });
 
+/******************/
+/* AJAX Functions */
+/******************/
+
+/**\fn get_colour_list
+ *
+ * Retrives a colour list from the database
+ *
+ * @param None
+ *
+ * @returns json set to a list of colours from the database
+ */
+
+if(isset($_GET['get_colour_list']))
+{
+   header('Content-Type: application/json');
+
+   $colour_list = array();
+
+   $colour_list = get_colour_list();
+
+   echo output_ajax_data(array("colours" => $colour_list));
+
+   exit;
+}
 
 ?>
