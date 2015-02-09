@@ -1,0 +1,78 @@
+/**
+ * Copyright 2015 Alan Drees
+ *
+ * Purpose:
+ *   Stylesheet for the PHP MVC/OOP Coding Test
+ *
+ * Dependencies:
+ *
+ */
+
+#content
+{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#explaination
+{
+    width: 75%;
+}
+
+#explaination
+{
+    margin-bottom: 15px;
+}
+
+#explaination-text
+{
+    font-size: 15px;
+}
+
+.center
+{
+    text-align: center;
+}
+
+#votes-output
+{
+    border: 1px solid black;
+}
+
+.colour-row
+{
+    border-top: none;
+    border-bottom: 1px solid black;
+}
+
+.colour-row:last-child
+{
+    border: none;
+}
+
+
+.colour-anchor-div
+{
+    width: 50%;
+    border-right: solid 1px black;
+    float: left;
+}
+
+a
+{
+    font-size: 20px;
+    color: #548DD4;
+}
+
+a:visited
+{
+    font-size: 20px;
+    color: #548DD4;
+}
+     
+.vote-sum
+{
+    font-size: 20px;
+    float: left;
+}
