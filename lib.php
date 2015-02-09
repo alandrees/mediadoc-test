@@ -68,7 +68,7 @@ function get_colour_list()
 }
 
 
-/**\fn get_colour_list
+/**\fn get_colour_votes
  *
  * Retrives the vote data for a given colour
  *
