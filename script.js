@@ -135,3 +135,29 @@ MDT.print_sum = function()
 
     $("." + colour_name).find(".vote-sum").text(sum.toString());
 }
+
+
+
+/**\fn MDT.build_color_table
+ *
+ * Builds the colour table
+ *
+ * @param None
+ *
+ * @returns None
+ */
+
+MDT.build_color_table = function()
+{
+    for(var x in MDT.colours)
+    {
+	if(typeof MDT.colours[x].renderer === 'function')
+	{
+	    MDT.colours[x].renderer();
+	}
+	else
+	{
+	    console.log(x + " color object's renderer not a function.");
+	}
+    }
+}
