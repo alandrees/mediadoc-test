@@ -99,3 +99,18 @@ MDT.Colour.prototype._get_votes = function()
 			     false
 			    );
 }
+
+
+/**\fn MDT.Colour.prototype._push
+ *
+ * Pushes another vote object onto the vote list
+ *
+ * @param votes (object) vote object
+ *
+ * @returns None
+ */
+
+MDT.Colour.prototype._push = function(votes)
+{
+    this._votes.push(votes);
+}
