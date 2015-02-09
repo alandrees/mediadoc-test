@@ -136,3 +136,18 @@ MDT.Colour.prototype._set_renderer = function(renderfunc)
 	console.log("Not a function.");
     }
 }
+
+
+/**\fn MDT.Colour.prototype.votes_retrieved
+ *
+ * Wrapper get function for the _votes_retrieved value
+ *
+ * @param None
+ *
+ * @returns (boolean) True if the votes have been retrieved
+ */
+
+MDT.Colour.prototype.votes_retrieved = function()
+{
+    return this._votes_retrieved;
+}
