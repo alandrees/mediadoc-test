@@ -48,3 +48,32 @@ MDT.Total = function(colour_list, renderer)
 	this.renderer = renderer;
     }
 }
+
+
+/**\fn MDT.Total.prototype.sum
+ *
+ * Sums all the colour object votes
+ *
+ * @param None
+ *
+ * @returns (integer) summation of all the votes for every colour
+ */
+
+MDT.Total.prototype.sum = function()
+{
+    var i = "";
+
+    this._votes = 0;
+
+    for(i in this._colour_list)
+    {
+	if(this._colour_list[i] instanceof MDT.Colour)
+	{
+	    this._votes += this._colour_list[i].sum();
+	}
+    }
+
+    this._votes_calculated = false;
+
+    return this._votes;
+}
