@@ -161,3 +161,18 @@ MDT.build_color_table = function()
 	}
     }
 }
+
+
+/**\fn MDT.onready_func
+ *
+ * Function to be executed when the onready
+ *
+ * @param None
+ *
+ * @returns None
+ */
+
+MDT.onready_func = function()
+{
+    MDT.populate_color_list();
+}
