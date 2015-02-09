@@ -55,4 +55,38 @@ if(isset($_GET['get_colour_list']))
    exit;
 }
 
+
+/**\fn get_votes
+ *
+ * Gets the votes for a given colour
+ *
+ * @param colour (string) colour to get the vote objects for
+ *
+ * @returns json set to an array of vote objects
+ */
+
+if(isset($_GET['get_votes']))
+{
+   header('Content-Type: application/json');
+
+   $votes = array();
+
+   if(isset($_POST['colour']))
+   {
+       $votes = get_colour_votes($_POST['colour']);
+
+       for($i = 0; $i < count($votes); $i++)
+       {
+          $votes[$i]['votes'] = (integer)$votes[$i]['votes'];
+       }
+
+       echo output_ajax_data(array('votes' => $votes));
+       exit;
+   }
+   else
+   {
+       echo output_ajax_data('', '', 1, "Missing required parameter: colour");
+       exit;
+   }
+}
 ?>
