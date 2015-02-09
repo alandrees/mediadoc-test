@@ -114,3 +114,25 @@ MDT.Colour.prototype._push = function(votes)
 {
     this._votes.push(votes);
 }
+
+
+/**\fn MDT.Colour.prototype.set_renderer
+ *
+ * Assigns a renderer for the colour object
+ *
+ * @param renderfunc (function) renderer function
+ *
+ * @returns None
+ */
+
+MDT.Colour.prototype._set_renderer = function(renderfunc)
+{
+    if(typeof renderfunc === 'function')
+    {
+	this.renderer = renderfunc;
+    }
+    else
+    {
+	console.log("Not a function.");
+    }
+}
