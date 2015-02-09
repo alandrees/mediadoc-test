@@ -54,3 +54,55 @@ MDT.populate_color_list = function()
 			     }
 			    );
 }
+
+
+/**\fn MDT.colour_renderer
+ *
+ * Renders the MDT.Colour object into it's controller
+ *
+ * @param None
+ *
+ * @returns None
+ */
+
+MDT.colour_renderer = function()
+{
+    var colour_name = "";
+
+    var self = this;
+
+    if(this instanceof MDT.Colour || this instanceof MDT.Total)
+    {
+	colour_name = this._colour_name;
+    }
+    else
+    {
+	console.log("Not an MDT.Colour object");
+	return;
+    }
+
+    var element = $("<div>");
+
+    element.addClass(colour_name);
+    element.addClass('colour-row');
+
+    var anchor_div = $("<div>")
+    anchor_div.addClass('colour-anchor-div');
+
+    var anchor = $("<a>");
+    anchor.addClass("colour-anchor");
+    anchor.prop('href', '');
+    anchor.on('click', function(){MDT.print_sum.call(self);return false;})
+    anchor.text(colour_name);
+
+    anchor_div.append(anchor);
+    element.append(anchor_div);
+
+    sum = $("<div>")
+    sum.addClass("vote-sum");
+
+    element.append(sum);
+    element.append($("<div style='clear: both;'>"));
+
+    $("#" + MDT.target).append(element);
+}
