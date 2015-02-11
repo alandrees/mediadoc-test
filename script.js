@@ -151,6 +151,8 @@ MDT.print_sum = function()
 
 MDT.build_color_table = function()
 {
+    $("#" + MDT.target).append('<div id="table-title" class="colour-row"><div class="colour-anchor-div">Colour</div><div class="vote-sum">Votes</div><div style="clear: both;"></div></div>');
+
     for(var x in MDT.colours)
     {
 	     if(typeof MDT.colours[x].renderer === 'function')
