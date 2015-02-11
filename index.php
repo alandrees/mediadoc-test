@@ -46,5 +46,13 @@ require_once(__DIR__."/lib.php");
       <div id="votes-output">
       </div>
     </div>
+    <script>
+if(typeof MDT === 'undefined')
+{
+    MDT = {};
+}
+
+MDT.total_type = <?php echo MDT_Config::$total_type;?>;
+    </script>
   </body>
 </html>
