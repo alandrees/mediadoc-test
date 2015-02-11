@@ -31,30 +31,30 @@ if(typeof MDT !== 'undefined')
 MDT.populate_color_list = function()
 {
     AD.AjaxAPI.ajax_api_call('/ajax.php',
-			     'get_colour_list',
-			     '',
-			     function(data)
-			     {
-				 var colour = "";
+			                    'get_colour_list',
+			                    '',
+			                    function(data)
+			                    {
+				                     var colour = "";
 
-				 for(var i = 0; i < data.json.colours.length; i++)
-				 {
-				     colour = data.json.colours[i];
-				     MDT.colours[colour] = new MDT.Colour(colour, MDT.colour_renderer);
-				 }
+				                     for(var i = 0; i < data.json.colours.length; i++)
+				                     {
+				                         colour = data.json.colours[i];
+				                         MDT.colours[colour] = new MDT.Colour(colour, MDT.colour_renderer);
+				                     }
 
-				 MDT.colours['Total'] = new MDT.Total(MDT.colours, MDT.colour_renderer);
+				                     MDT.colours['Total'] = new MDT.Total(MDT.colours, MDT.colour_renderer);
 
-				 MDT.colours['Total'].set_sum_type(MDT.total_type);
+				                     MDT.colours['Total'].set_sum_type(MDT.total_type);
 
-				 MDT.build_color_table();
-			     },
-			     undefined,
-			     function(data)
-			     {
-				 console.log(data);
-			     }
-			    );
+				                     MDT.build_color_table();
+			                    },
+			                    undefined,
+			                    function(data)
+			                    {
+				                     console.log(data);
+			                    }
+			                   );
 }
 
 
@@ -75,12 +75,12 @@ MDT.colour_renderer = function()
 
     if(this instanceof MDT.Colour || this instanceof MDT.Total)
     {
-	colour_name = this._colour_name;
+	     colour_name = this._colour_name;
     }
     else
     {
-	console.log("Not an MDT.Colour object");
-	return;
+	     console.log("Not an MDT.Colour object");
+	     return;
     }
 
     var element = $("<div>");
