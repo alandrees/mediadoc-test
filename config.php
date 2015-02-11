@@ -16,6 +16,9 @@
 
 final class MDT_Config
 {
+    const DATABASE_TOTAL = 0;
+    const ACQUIRED_TOTAL = 1;
+
 
     //what type of database backend will we be using
     public static $servertype = 'sqlite';
@@ -31,5 +34,14 @@ final class MDT_Config
 
     //database
     public static $database = "";
+
+    //total_mode
+    /* If total mode is set to DATABASE_TOTAL when
+       calculating the total, it will get the numbers
+       for each colour from the database.  If set to
+       ACQUIRED_TOTAL, it will only sum the values
+       already retrieved from the database
+    */
+    public static $total_type = MDT_Config::ACQUIRED_TOTAL;
 }
 ?>
