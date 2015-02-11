@@ -73,10 +73,22 @@ MDT.Total.prototype.sum = function()
 
     for(i in this._colour_list)
     {
-	if(this._colour_list[i] instanceof MDT.Colour)
-	{
-	    this._votes += this._colour_list[i].sum();
-	}
+	     if(this._colour_list[i] instanceof MDT.Colour)
+	     {
+
+            switch(this._sum_type)
+            {
+            case MDT.Total.total_types.DATABASE_TOTAL:
+                this._votes += this._colour_list[i].sum();
+                break;
+            case MDT.Total.total_types.ACQUIRED_TOTAL:
+                if(this._colour_list[i].votes_retrieved())
+                {
+                    this._votes += this._colour_list[i].sum();
+                }
+                break;
+            }
+	     }
     }
 
     this._votes_calculated = false;
