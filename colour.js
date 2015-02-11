@@ -28,7 +28,7 @@ MDT.Colour = function(name, renderer)
 
     if(typeof renderer !== 'function')
     {
-	     this.renderer = function(){console.log("Renderer not Assigned.  Nothing rendered.");}
+	     this.renderer = function(){MDT.log("Renderer not Assigned.  Nothing rendered.");}
     }
     else
     {
@@ -94,7 +94,7 @@ MDT.Colour.prototype._get_votes = function()
 			                    undefined,
 			                    function(data)
 			                    {
-				                     console.log(data);
+				                     MDT.log(data);
 			                    },
 			                    false
 			                   );
@@ -133,7 +133,7 @@ MDT.Colour.prototype._set_renderer = function(renderfunc)
     }
     else
     {
-	     console.log("Not a function.");
+	     MDT.log("Not a function.");
     }
 }
 

@@ -52,7 +52,7 @@ MDT.populate_color_list = function()
 			                    undefined,
 			                    function(data)
 			                    {
-				                     console.log(data);
+				                     MDT.log(data);
 			                    }
 			                   );
 }
@@ -79,7 +79,7 @@ MDT.colour_renderer = function()
     }
     else
     {
-	     console.log("Not an MDT.Colour object");
+	     MDT.log("Not an MDT.Colour object");
 	     return;
     }
 
@@ -129,7 +129,7 @@ MDT.print_sum = function()
     }
     else
     {
-	     console.log("Not an MDT.Colour object");
+	     MDT.log("Not an MDT.Colour object");
 	     return;
     }
 

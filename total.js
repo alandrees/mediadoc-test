@@ -44,7 +44,7 @@ MDT.Total = function(colour_list, renderer)
 
     if(typeof renderer !== 'function')
     {
-	this.renderer = function(){console.log("Renderer not Assigned.  Nothing rendered.");}
+	this.renderer = function(){MDT.log("Renderer not Assigned.  Nothing rendered.");}
     }
     else
     {
