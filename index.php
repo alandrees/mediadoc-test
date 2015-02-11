@@ -45,6 +45,7 @@ require_once(__DIR__."/lib.php");
       </div>
       <div id="votes-output">
       </div>
+      <div id="output-console" style="width: 100%; font-size: 10px;"></div>
     </div>
     <script>
 if(typeof MDT === 'undefined')
