@@ -45,6 +45,8 @@ MDT.populate_color_list = function()
 
 				 MDT.colours['Total'] = new MDT.Total(MDT.colours, MDT.colour_renderer);
 
+				 MDT.colours['Total'].set_sum_type(MDT.total_type);
+
 				 MDT.build_color_table();
 			     },
 			     undefined,
