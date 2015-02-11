@@ -153,14 +153,14 @@ MDT.build_color_table = function()
 {
     for(var x in MDT.colours)
     {
-	if(typeof MDT.colours[x].renderer === 'function')
-	{
-	    MDT.colours[x].renderer();
-	}
-	else
-	{
-	    console.log(x + " color object's renderer not a function.");
-	}
+	     if(typeof MDT.colours[x].renderer === 'function')
+	     {
+	         MDT.colours[x].renderer();
+	     }
+	     else
+	     {
+	         console.log(x + " color object's renderer not a function.");
+	     }
     }
 }
 
