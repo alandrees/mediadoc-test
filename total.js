@@ -39,6 +39,9 @@ MDT.Total = function(colour_list, renderer)
     //this._votes_calculated now determines if there is
     this._votes_calculated = false;
 
+    //set the sum type to DATABASE_TOTAL by default
+    this._sum_type = MDT.Total.total_types.DATABASE_TOTAL;
+
     if(typeof renderer !== 'function')
     {
 	this.renderer = function(){console.log("Renderer not Assigned.  Nothing rendered.");}
