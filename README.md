@@ -12,7 +12,7 @@ I have included an sqlite database for ease of portability, you'll need the sqli
 Please refer to your distribution documentation to install sqlite.
 
 The config.php file contains the options for the application:
-```
+
 $servertype - set to either 'sqlite' or 'mysql', determines the type of backend database server
 
 $server - if using sqlite, the path to the database file, if using mysql, the hostname for the server
@@ -23,7 +23,4 @@ $password - mysql password
 
 $database - mysql database
 
-$total_type - The instructions weren't exactly clear if it should total the currently displayed votes or all the votes in the database.
-              Setting this to MDT_Config::DATABASE_TOTAL totals all the database values, setting it to MDT_Config::ACQUIRED_TOTAL totals
-	      only the already retrived values.
-```
+$total_type - Setting this to MDT_Config::DATABASE_TOTAL totals all the database values, setting it to MDT_Config::ACQUIRED_TOTAL totals only the already retrived values.
