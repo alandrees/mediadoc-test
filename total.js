@@ -95,3 +95,18 @@ MDT.Total.prototype.sum = function()
 
     return this._votes;
 }
+
+
+/**\fn MDT.Total.prototype.set_sum_type
+ *
+ * Sets the type of sum calculation to be executed
+ *
+ * @param new_sum_type (integer) sum type to be set
+ *
+ * @returns None
+ */
+
+MDT.Total.prototype.set_sum_type = function(new_sum_type)
+{
+    this._sum_type = new_sum_type;
+}
