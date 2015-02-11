@@ -91,7 +91,7 @@ MDT.Total.prototype.sum = function()
 	     }
     }
 
-    this._votes_calculated = false;
+    this._votes_calculated = true;
 
     return this._votes;
 }
