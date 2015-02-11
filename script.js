@@ -125,12 +125,12 @@ MDT.print_sum = function()
 
     if(this instanceof MDT.Colour || this instanceof MDT.Total)
     {
-	colour_name = this._colour_name;
+	     colour_name = this._colour_name;
     }
     else
     {
-	console.log("Not an MDT.Colour object");
-	return;
+	     console.log("Not an MDT.Colour object");
+	     return;
     }
 
     var sum = this.sum();
