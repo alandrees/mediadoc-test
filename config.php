@@ -42,6 +42,6 @@ final class MDT_Config
        ACQUIRED_TOTAL, it will only sum the values
        already retrieved from the database
     */
-    public static $total_type = MDT_Config::ACQUIRED_TOTAL;
+    public static $total_type = MDT_Config::DATABASE_TOTAL;
 }
 ?>
