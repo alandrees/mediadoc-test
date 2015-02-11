@@ -24,7 +24,7 @@ final class MDT_Config
     public static $servertype = 'sqlite';
 
     //defines the server, or if using sqlite, the file
-    public static $server = "/var/www/html/media-doc-test";
+    public static $server = __DIR__."/media-doc-test";
 
     //server username [MYSQL ONLY]
     public static $username = "";
