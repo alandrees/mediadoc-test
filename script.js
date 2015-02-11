@@ -161,9 +161,25 @@ MDT.build_color_table = function()
 	     }
 	     else
 	     {
-	         console.log(x + " color object's renderer not a function.");
+	         MDT.log(x + " color object's renderer not a function.");
 	     }
     }
+}
+
+
+
+/**\fn MDT.log
+ *
+ * Logs errors to the on-page error console
+ *
+ * @param message (string) message to log to the on-screen console
+ *
+ * @returns None
+ */
+
+MDT.log = function(message)
+{
+    $("#output-console").html(message);
 }
 
 
