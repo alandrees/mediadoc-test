@@ -52,6 +52,9 @@ MDT.Total = function(colour_list, renderer)
     }
 }
 
+MDT.Total.total_types = {'DATABASE_TOTAL' : 0,
+                         'ACQUIRED_TOTAL' : 1};
+
 
 /**\fn MDT.Total.prototype.sum
  *
