@@ -135,7 +135,7 @@ MDT.print_sum = function()
 
     var sum = this.sum();
 
-    $("." + colour_name).find(".vote-sum").text(sum.toString());
+    $("." + colour_name).find(".vote-sum").text(sum.toLocaleString());
 }
 
 
