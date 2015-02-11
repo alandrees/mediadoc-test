@@ -197,7 +197,6 @@ MDT.onready_func = function()
     MDT.populate_color_list();
 }
 
-
 /***************/
 /* Entry Point */
 /***************/
