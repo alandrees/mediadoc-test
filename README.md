@@ -7,7 +7,7 @@ A live version of this code can be found here: http://mdt.alandre.es
 
 Browse to your http directory, and issue the following command:
 
-  git clone https://github.com/alandrees/mediadoc-test.git
+  git clone https://github.com/alandrees/mediadoc-test.git ./
 
 I have included an sqlite database (media-doc-test) for ease of portability, you'll need the sqlite php module loaded to run it.
 
