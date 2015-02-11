@@ -28,11 +28,11 @@ MDT.Colour = function(name, renderer)
 
     if(typeof renderer !== 'function')
     {
-	this.renderer = function(){console.log("Renderer not Assigned.  Nothing rendered.");}
+	     this.renderer = function(){console.log("Renderer not Assigned.  Nothing rendered.");}
     }
     else
     {
-	this.renderer = renderer;
+	     this.renderer = renderer;
     }
 }
 
@@ -52,12 +52,12 @@ MDT.Colour.prototype.sum = function()
 
     if(this._votes_retrieved === false)
     {
-	this._get_votes();
+	     this._get_votes();
     }
 
     for(var x = 0; x < this._votes.length; x++)
     {
-	votes += this._votes[x].votes;
+	     votes += this._votes[x].votes;
     }
 
     return votes;
