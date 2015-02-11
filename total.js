@@ -26,11 +26,11 @@ MDT.Total = function(colour_list, renderer)
 
     if(typeof colour_list === 'object')
     {
-	this._colour_list = colour_list
+	     this._colour_list = colour_list
     }
     else
     {
-	this._colour_list = [];
+	     this._colour_list = [];
     }
 
     //this._votes is now an integer
