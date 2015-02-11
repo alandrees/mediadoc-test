@@ -80,24 +80,24 @@ MDT.Colour.prototype._get_votes = function()
     this._votes = [];
 
     AD.AjaxAPI.ajax_api_call('/ajax.php',
-			     'get_votes',
-			     "colour=" + this._colour_name,
-			     function(data)
-			     {
-				 for(var i = 0; i < data.json.votes.length; i++)
-				 {
-				     self._push(data.json.votes[i]);
-				 }
+			                    'get_votes',
+			                    "colour=" + this._colour_name,
+			                    function(data)
+			                    {
+				                     for(var i = 0; i < data.json.votes.length; i++)
+				                     {
+				                         self._push(data.json.votes[i]);
+				                     }
 
-				 self._votes_retrieved = true;
-			     },
-			     undefined,
-			     function(data)
-			     {
-				 console.log(data);
-			     },
-			     false
-			    );
+				                     self._votes_retrieved = true;
+			                    },
+			                    undefined,
+			                    function(data)
+			                    {
+				                     console.log(data);
+			                    },
+			                    false
+			                   );
 }
 
 
@@ -129,11 +129,11 @@ MDT.Colour.prototype._set_renderer = function(renderfunc)
 {
     if(typeof renderfunc === 'function')
     {
-	this.renderer = renderfunc;
+	     this.renderer = renderfunc;
     }
     else
     {
-	console.log("Not a function.");
+	     console.log("Not a function.");
     }
 }
 
