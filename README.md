@@ -1,5 +1,7 @@
 # mediadoc-test
-This is the code for the mediadoc test application
+This is the code for the mediadoc test application.
+
+A live version of this code can be found here: http://mdt.alandre.es
 
 Installation:
 
